@@ -1,0 +1,11 @@
+twython
+python-dotenv
+pandas
+psycopg2-binary
+sqlalchemy
+nltk
+numpy==1.16.1
+geopy
+gmplot
+folium
+
