@@ -1,26 +1,7 @@
 from twython import Twython
 import json
-import pandas
 
-with open("twitter_credentials.json", "r") as file :
-    creds = json.load(file)
+python_tweets = Twython("byLgF6D4jMOstVEzCfHhwWk46", "EM9xsoauCKmNthC66aFz49gkbVpLWxzplQdtC0RmJtbtLgLA6D", "2234843953-lpTeqSMMZVGKyt4UtDxLg5KSkIigPItnOVYi0Yu", "IxwJNswdVSxAmQafZ4TSosW0I3SatmgBfpyiRiTwCrU2h")
 
-python_tweets = Twython(creds['CONSUMER_KEY'], creds['CONSUMER_SECRET'])
-
-query = {'q': 'le',
-        'lang': 'fr',
-        'result_type': 'recent',
-        'count': 10,
-        }
-
-dict_ = {'user': [], 'date': [], 'text': [], 'localisation': [], 'favorite_count': []}
-for status in python_tweets.search(**query)['statuses'] :
-    dict_['user'].append(status['user']['screen_name'])
-    dict_['date'].append(status['created_at'])
-    dict_['text'].append(status['text'])
-    dict_['localisation'].append(status['coordinates'])
-    dict_['favorite_count'].append(status['favorite_count'])
-
-df = pandas.DataFrame(dict_)
-df.sort_values(by='date', inplace=True, ascending=False)
-df.head(10)
+with open("donnees.json", "w") as donnees :
+    json.dump(python_tweets.search(q='le OR la OR l OR je OR tu OR il OR nous OR vous OR ils OR elle OR elles OR ça', lang='fr', result_type='recent', count=10), donnees, sort_keys=True, indent=4)
