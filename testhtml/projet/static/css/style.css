@@ -1,0 +1,21 @@
+h1
+{
+    color : blue;
+    border: 3px blue double;
+    text-align : center;
+}
+#noms
+{
+    display : flex;
+    flex-direction:line;
+    justify-content:bottom;
+    background-color:#00FFFF;
+}
+.element
+{
+    margin:auto;
+}
+body
+{
+    background-image: url("twitter.png");
+}

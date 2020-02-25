@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+  <FONT face="Times New Roman">
+    <head>
+        <title>Emotion twitter</title>
+        <meta charset="utf-8">
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="../static/css/style.css">
+    </head>
+    
+    <body>
+      <h1>Emotion twitter</h1>
+      <nav>
+	<ul>
+	  <li><a href="/">Accueil</a></li>
+	  <li><a href="rapport">Rapport</a></li>
+	</ul>
+  <form method='POST'>
+    <select name="test">
+      {% for key in mondic %}
+      <option value='{{key}}'>{{key}}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" value="Générer la map">
+  </form>
+      </nav>
+    </body>
+    	<footer id="noms">
+	  <div class="element">Camille Carrette</div>
+	  <div class="element">Cholok Lee</div>
+	  <div class="element">Antonin</div>
+	  <div class="element">Leo</div>
+	</footer>
+    </FONT>
+</html>
+
+
+
