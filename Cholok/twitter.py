@@ -53,6 +53,7 @@ with open('emotion.csv','w',newline='') as emocsv :
 	emo_writer = csv.DictWriter(emocsv, fieldnames=fieldname)
 	emo_writer.writeheader()
 
+
 	for tw in data_tw :
 		F_tw = Feel(tw.get('text'))
 		emo_tw = F_tw.emotions()
@@ -63,7 +64,7 @@ with open('emotion.csv','w',newline='') as emocsv :
 		else :
 			data_emotions[geo_tw]=(data_emotions[geo_tw]+pos_tw)/2
 
-	for geo in data_emotions :		
+	for geo in data_emotions : 
 		emo_writer.writerow({'Region' : geo , 'Emotion' : data_emotions[geo] })
 
 
@@ -82,7 +83,7 @@ m.choropleth(
 	name='choropleth',
 	data=region_data,
 	columns=['Region','Emotion'],
-	key_on='feature.properties.code',
+	key_on='feature.properties.nom',
 	fill_color='RdYlBu',
 	nan_fill_color='white',
 	fill_opacity=0.5,

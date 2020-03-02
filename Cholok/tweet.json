@@ -4,181 +4,42 @@
 	 "text" : "Ma classe fonctionne bien, c'est sympathique non ?",
 	 "user" : {},  
 	 "entities" : {},
-	 "location" : 11
+	 "location" : "Paris"
 	},
 	{
 	 "id": 105011886446521728,
 	 "text" : "Ma classe ne fonctionne pas bien, c'est horrible.",
 	 "user" : {},  
 	 "entities" : {},
-	 "location" : 24
+	 "location" : "Yvelines"
 	},
 	{
 	 "id": 105084651921728,
 	 "text" : "Ma classe fonctionne bien, c'est sympathique non ?",
 	 "user" : {},  
 	 "entities" : {},
-	 "location" : 27
+	 "location" : "Yvelines"
 	},
 	{
 	 "id": 105984166121728,
 	 "text" : "c'est trist.",
 	 "user" : {},  
 	 "entities" : {},
-	 "location" : 28
+	 "location" : "Somme"
 	},
 	{
 	 "id": 105011869846374728,
 	 "text" : "Ma classe ne fonctionne pas bien, c'est horrible.",
 	 "user" : {},  
 	 "entities" : {},
-	 "location" : 32
+	 "location" : "Somme"
 	},
 	{
 	 "id": 105981671476628,
 	 "text" : "c'est trist.",
 	 "user" : {},  
 	 "entities" : {},
-	 "location" : 44
-	},
-	{
-	 "id": 105017527435728,
-	 "text" : "Ma classe ne fonctionne pas bien, c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 52
-	},
-	{
-	 "id": 10453785621198921728,
-	 "text" : "c'est trist.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 53
-	},
-	{
-	 "id": 19965422428921728,
-	 "text" : "c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 75
-	},
-	{
-	 "id": 10501186211453823,
-	 "text" : "c'est tres impressive!",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 76
-	},
-	{
-	 "id": 896664532548921728,
-	 "text" : "je suis très heureux!!",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 84
-	},
-	{
-	 "id": 10501186211945388,
-	 "text" : "c'est pas bon.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 76
-	},
-	{
-	 "id": 10545632198921728,
-	 "text" : "c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 94
-	},
-	{
-	 "id": 1050118621198921728,
-	 "text" : "c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 11
-	},
-	{
-	 "id": 105011886446521728,
-	 "text" : "Ma classe ne fonctionne pas bien, c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 76
-	},
-	{
-	 "id": 105084651921728,
-	 "text" : "Ma classe fonctionne bien, c'est sympathique non ?",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 27
-	},
-	{
-	 "id": 105984166121728,
-	 "text" : "c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 28
-	},
-	{
-	 "id": 105011869846374728,
-	 "text" : "Ma classe ne fonctionne pas bien, c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 32
-	},
-	{
-	 "id": 105981671476628,
-	 "text" : "c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 76
-	},
-	{
-	 "id": 105017527435728,
-	 "text" : "Ma classe ne fonctionne pas bien, c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 52
-	},
-	{
-	 "id": 10453785621198921728,
-	 "text" : "c'est trist.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 53
-	},
-	{
-	 "id": 19965422428921728,
-	 "text" : "c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 75
-	},
-	{
-	 "id": 10501186211453823,
-	 "text" : "c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 53
-	},
-	{
-	 "id": 896664532548921728,
-	 "text" : "je suis très heureux!!",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 53
-	},
-	{
-	 "id": 10501186211945388,
-	 "text" : "c'est pas bon.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 93
-	},
-	{
-	 "id": 10545632198921728,
-	 "text" : "c'est horrible.",
-	 "user" : {},  
-	 "entities" : {},
-	 "location" : 94
+	 "location" : "Paris"
 	}
+	
 ]
