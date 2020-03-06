@@ -5,7 +5,7 @@ from flask.views import View
 app = Flask(__name__)
 
 
-with open('tweet.json','r') as tw:
+with open('donnees1.json','r') as tw:
 	data = tw.read()
 
 data_tw = json.loads(data)
@@ -13,7 +13,10 @@ data_tw = json.loads(data)
 @app.route('/', methods=['GET','POST'])
 def index():
 	if request.method == 'POST':
-		return render_template('map5.html')
+		with open('tweet.json','r') as tw:
+			data = tw.read()
+		data_tw2 = json.loads(data)
+		return render_template('index.html', mondic=data_tw2)
 	else:
 		return render_template('index.html', mondic=data_tw)
 
