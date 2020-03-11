@@ -8,7 +8,7 @@ import re
 
 client = pymongo.MongoClient("mongodb://Admin:LesEmotions@cluster0-shard-00-00-nbixs.gcp.mongodb.net:27017,cluster0-shard-00-01-nbixs.gcp.mongodb.net:27017,cluster0-shard-00-02-nbixs.gcp.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority")
 db = client.tweets
-col = db.Fillon
+col = db[sys.argv[1]]
 
 # nom_col = sys.argv[1]
 
@@ -21,9 +21,8 @@ python_tweets = Twython("byLgF6D4jMOstVEzCfHhwWk46", "EM9xsoauCKmNthC66aFz49gkbV
 
 
 quer = ""
-for oui in sys.argv :
-    if (oui != sys.argv[0]) :
-        quer += oui + " OR " 
+for oui in sys.argv[2 : ] :
+    quer += str(oui) + " OR " 
 
 quer = quer[0:-4]
 
@@ -40,6 +39,7 @@ while (i < len(dict_["statuses"])) :
             print(dict_["statuses"][i]["retweeted_status"]["created_at"])
             print("https://twitter.com/i/web/status/" + dict_["statuses"][i]["retweeted_status"]["id_str"])
             print(dict_["statuses"][i]["retweeted_status"]["id_str"] + "\n")
+            print(quer)
             tweet = {
                 'location' : dict_["statuses"][i]["retweeted_status"]["user"]["location"],
                 'text' : dict_["statuses"][i]["retweeted_status"]["text"],
@@ -68,6 +68,7 @@ while (i < len(dict_["statuses"])) :
             print(dict_["statuses"][i]["created_at"])
             print("https://twitter.com/i/web/status/" + dict_["statuses"][i]["id_str"])
             print(dict_["statuses"][i]["id_str"] + "\n")
+            print(quer)
             tweet = {
                 'location' : dict_["statuses"][i]["user"]["location"],
                 'text' : dict_["statuses"][i]["text"],
