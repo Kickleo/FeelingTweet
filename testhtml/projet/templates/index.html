@@ -20,20 +20,23 @@
 	</ul>
   <form method='POST'>
     <select name="test">
-      {% for key in mondic %}
+      {% for keys in mondic %}
+        {% for key in keys %}
       <option value='{{key}}'>{{key}}</option>
+        {% endfor %}
       {% endfor %}
     </select>
     <input type="submit" value="Générer la map">
-  </form>
-      </nav>
-      <iframe 
-      name="map"
+  </nav>
+      </form>
+       <iframe 
       title="map" 
       width="600"
-      height="400">
+      height="400"
+      allow="autoplay"
+      src="mapFrame"
+      >
       </iframe>
-    </body>
     </body>
     	<footer id="noms">
 	  <div class="element">Camille Carrette</div>
