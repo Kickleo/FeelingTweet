@@ -36,7 +36,7 @@ import numpy as np
 #	fill_color='428bca'
 #).add_to(m)
 
-region = os.path.join('geo.json')
+region = os.path.join('arrondissement.json')
 
 
 
