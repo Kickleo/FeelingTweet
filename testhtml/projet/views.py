@@ -16,7 +16,7 @@ def index():
 	if request.method == 'POST':
 		with open('tweet.json','r') as tw:
 			data = tw.read()
-		subprocess.run(["python test.py"],shell=True)
+		subprocess.run(["python3 twitter.py"],shell=True)
 		data_tw2 = json.loads(data)
 
 		return render_template('index.html', mondic=data_tw2)
