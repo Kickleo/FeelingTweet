@@ -41,7 +41,7 @@ region = os.path.join('arrondissement.json')
 
 
 
-with open('tweet.json','r') as tw:
+with open('datatweets.json','r') as tw:
 	data = tw.read()
 
 data_tw = json.loads(data)
@@ -58,11 +58,14 @@ with open('emotion.csv','w',newline='') as emocsv :
 		F_tw = Feel(tw.get('text'))
 		emo_tw = F_tw.emotions()
 		pos_tw = emo_tw['positivity']
-		geo_tw = tw.get('location')
-		if geo_tw not in data_emotions : 
-			data_emotions[geo_tw]=pos_tw;
+		geo_tw1 = tw.get('location')
+		geo_tw2 = geo_tw1.split(",")[0]
+
+		
+		if geo_tw2 not in data_emotions : 
+			data_emotions[geo_tw2]=pos_tw;
 		else :
-			data_emotions[geo_tw]=(data_emotions[geo_tw]+pos_tw)/2
+			data_emotions[geo_tw2]=(data_emotions[geo_tw2]+pos_tw)/2
 
 	for geo in data_emotions : 
 		emo_writer.writerow({'Region' : geo , 'Emotion' : data_emotions[geo] })
