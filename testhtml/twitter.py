@@ -98,4 +98,4 @@ folium.LayerControl().add_to(m)
 
 
 
-m.save('projet/tempaltes/twitter.html')
+m.save('projet/templates/twitter.html')
