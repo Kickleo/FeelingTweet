@@ -6,7 +6,7 @@ import subprocess
 app = Flask(__name__)
 
 
-with open('donnees1.json','r') as tw:
+with open('tweet.json','r') as tw:
 	data = tw.read()
 
 data_tw = json.loads(data)
@@ -30,7 +30,7 @@ def rapport():
 
 @app.route('/mapFrame')
 def mapFrame():
-	return render_template('map5.html')
+	return render_template('twitter.html')
 
 if __name__ == "__main__":
 	app.run()
