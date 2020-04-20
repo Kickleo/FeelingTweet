@@ -10,10 +10,6 @@ client = pymongo.MongoClient("mongodb://Admin:LesEmotions@cluster0-shard-00-00-n
 db = client.tweets
 col = db[sys.argv[1]]
 
-# nom_col = sys.argv[1]
-
-# print('Created {0} of 500 as {1}'.format(x,result.inserted_id))
-# print('finished creating 500 business reviews')
 
 
 
@@ -48,17 +44,6 @@ while (i < len(dict_["statuses"])) :
                 '_id' : dict_["statuses"][i]["retweeted_status"]["id_str"]
             }
             result = col.insert_one(tweet)
-            # print(i)
-            # print("CECI EST UN retweet")
-            # print(dict_["statuses"][i]["retweeted_status"]["user"]["location"])
-            # print(dict_["statuses"][i]["retweeted_status"]["text"])
-            # print("https://twitter.com/i/web/status/" + dict_["statuses"][i]["retweeted_status"]["id_str"])
-        # else :
-        #     print("Nique bien ta mère")
-        #     print(dict_["statuses"][i]["retweeted_status"]["text"])
-        #     print("https://twitter.com/i/web/status/" + dict_["statuses"][i]["retweeted_status"]["id_str"])
-        # for key in dict_["statuses"][i]["retweeted_status"] :
-        #     print(key)
 
     else :
         if ((re.search(".*,.*", dict_["statuses"][i]["user"]["location"]) is not None) and (col.count_documents({"_id" : dict_["statuses"][i]["id_str"]}) == 0)) :
@@ -77,17 +62,6 @@ while (i < len(dict_["statuses"])) :
                 '_id' : dict_["statuses"][i]["id_str"]
             }
             result = col.insert_one(tweet)
-            # print(i)
-            # print("CECI EST UN tweet")
-            # print(dict_["statuses"][i]["user"]["location"])
-            # print(dict_["statuses"][i]["text"])
-            # print("https://twitter.com/i/web/status/" + dict_["statuses"][i]["id_str"])
-        # else :
-        #     print("Nique bien ta mère")
-        #     print(dict_["statuses"][i]["text"])
-        #     print("https://twitter.com/i/web/status/" + dict_["statuses"][i]["id_str"])      
-        # for key in dict_["statuses"][i] :
-        #     print(key)
 
     i = i + 1
 
