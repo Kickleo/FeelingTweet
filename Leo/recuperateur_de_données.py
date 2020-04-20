@@ -22,7 +22,7 @@ for oui in sys.argv[2 : ] :
 
 quer = quer[0:-4]
 
-dict_ = python_tweets.search(q=quer , lang='fr', result_type='mixed', count=10000)
+dict_ = python_tweets.search(q=quer , lang='fr', result_type='mixed', count=10000, tweet_mode='extended')
 
 i = 0
 while (i < len(dict_["statuses"])) :
@@ -31,14 +31,14 @@ while (i < len(dict_["statuses"])) :
         if ((re.search(".*,.*", dict_["statuses"][i]["retweeted_status"]["user"]["location"]) is not None) and (col.count_documents({"_id" : dict_["statuses"][i]["retweeted_status"]["id_str"]}) == 0)) :
             print(col.count_documents({"id_" : dict_["statuses"][i]["retweeted_status"]["id_str"]}))
             print("\n" + dict_["statuses"][i]["retweeted_status"]["user"]["location"])
-            print(dict_["statuses"][i]["retweeted_status"]["text"])
+            print(dict_["statuses"][i]["retweeted_status"]["full_text"])
             print(dict_["statuses"][i]["retweeted_status"]["created_at"])
             print("https://twitter.com/i/web/status/" + dict_["statuses"][i]["retweeted_status"]["id_str"])
             print(dict_["statuses"][i]["retweeted_status"]["id_str"] + "\n")
             print(quer)
             tweet = {
                 'location' : dict_["statuses"][i]["retweeted_status"]["user"]["location"],
-                'text' : dict_["statuses"][i]["retweeted_status"]["text"],
+                'text' : dict_["statuses"][i]["retweeted_status"]["full_text"],
                 'date' : dict_["statuses"][i]["retweeted_status"]["created_at"],
                 'url' : "https://twitter.com/i/web/status/" + dict_["statuses"][i]["retweeted_status"]["id_str"],
                 '_id' : dict_["statuses"][i]["retweeted_status"]["id_str"]
@@ -49,14 +49,14 @@ while (i < len(dict_["statuses"])) :
         if ((re.search(".*,.*", dict_["statuses"][i]["user"]["location"]) is not None) and (col.count_documents({"_id" : dict_["statuses"][i]["id_str"]}) == 0)) :
             print(col.count_documents({"id_" : dict_["statuses"][i]["id_str"]}))
             print("\n" + dict_["statuses"][i]["user"]["location"])
-            print(dict_["statuses"][i]["text"])
+            print(dict_["statuses"][i]["full_text"])
             print(dict_["statuses"][i]["created_at"])
             print("https://twitter.com/i/web/status/" + dict_["statuses"][i]["id_str"])
             print(dict_["statuses"][i]["id_str"] + "\n")
             print(quer)
             tweet = {
                 'location' : dict_["statuses"][i]["user"]["location"],
-                'text' : dict_["statuses"][i]["text"],
+                'text' : dict_["statuses"][i]["full_text"],
                 'date' : dict_["statuses"][i]["created_at"],
                 'url' : "https://twitter.com/i/web/status/" + dict_["statuses"][i]["id_str"],
                 '_id' : dict_["statuses"][i]["id_str"]
