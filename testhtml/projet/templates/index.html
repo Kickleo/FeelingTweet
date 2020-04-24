@@ -14,37 +14,38 @@
     <body>
       <h1>Emotion twitter</h1>
       <nav>
-	<ul>
-	  <li><a href="/">Accueil</a></li>
-	  <li><a href="rapport">Rapport</a></li>
-	</ul>
-  <form method='POST'>
-    <select name="test">
-      {% for keys in mondic %}
-        {% for key in keys %}
-      <option value='{{key}}'>{{key}}</option>
-        {% endfor %}
-      {% endfor %}
-    </select>
-    <input type="submit" value="Générer la map">
-  </nav>
+	     <ul>
+	       <li><a href="/">Accueil</a></li>
+	       <li><a href="rapport">Rapport</a></li>
+	     </ul>
+      <form method='POST'>
+        <select id="themes" name="themes">
+          {% for key in mondic %}
+              <option value='{{key}}'>{{key}}</option>
+          {% endfor %}
+        </select>
+        <input type="submit" value="Générer la map">
+      </nav>
       </form>
-       <iframe 
-      title="map" 
-      width="600"
-      height="400"
-      allow="autoplay"
-      src="mapFrame"
-      >
+      <iframe 
+        title="map" 
+        width="800"
+        height="600"
+        allow="autoplay"
+        src="mapFrame">
       </iframe>
+      <img 
+        src="../static/css/twitter.png"
+        height="168px" 
+        width="300px" >
     </body>
-    	<footer id="noms">
-	  <div class="element">Camille Carrette</div>
-	  <div class="element">Cholok Lee</div>
-	  <div class="element">Antonin Leonard</div>
-	  <div class="element">Leo Tepedelen</div>
-	</footer>
-    </FONT>
+    <footer id="noms">
+	   <div class="element">Camille Carrette</div>
+	   <div class="element">Cholok Lee</div>
+	   <div class="element">Antonin Leonard</div>
+	   <div class="element">Leo Tepedelen</div>
+	  </footer>
+  </FONT>
 </html>
 
 

@@ -1,8 +1,9 @@
 h1
 {
-    color : blue;
+    color : black;
     border: 3px blue double;
     text-align : center;
+    background-image:  "twitter.png";
 }
 #noms
 {
@@ -17,5 +18,10 @@ h1
 }
 body
 {
-    background-image: url("twitter.png");
+   background-color: rgb(0,172,238);
+
+}
+img
+{
+	float: right;
 }

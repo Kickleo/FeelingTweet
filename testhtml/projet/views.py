@@ -5,26 +5,26 @@ import subprocess
 
 app = Flask(__name__)
 
-
-with open('datatweets.json','r') as tw:
-	data = tw.read()
-
-data_tw = json.loads(data)
-
-theme = "Coronavirus Coronavirus"
+mondic={"Coronavirus",
+"Confinement",
+"E32020",
+"Fillon",
+"Football",
+"Macron",
+"MoisDesDroitsDeLaFemme"};
 
 @app.route('/', methods=['GET','POST'])
 def index():
 	if request.method == 'POST':
-		with open('tweet.json','r') as tw:
-			data = tw.read()
-		subprocess.run(["python3 tweetmap.py "+ theme],shell=True)
-		data_tw2 = json.loads(data)
+		
+		theme = request.form.get('themes')
 
-		return render_template('index.html', mondic=data_tw2)
+		subprocess.run(["python3 tweetmap.py "+str(theme)+" "+str(theme)],shell=True)
+
+		return render_template('index.html', mondic=mondic)
 
 	else:
-		return render_template('index.html', mondic=data_tw)
+		return render_template('index.html', mondic=mondic)
 
 @app.route('/rapport')
 def rapport():
