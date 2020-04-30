@@ -1,8 +1,9 @@
-﻿Emotion Twitter
+﻿
+# Feeling Tweet
 
-Application qui jauge les émotions sur twitter a propos de différents thèmes.
+## Application qui jauge les émotions sur twitter a propos de différents thèmes.
 
-Environement
+## Environement
 
 twython
 json
@@ -13,7 +14,7 @@ pyfeel
 script d’installation des modules en cours de création
 
 
-Utilisation
+## Utilisation
 
 Ajout de tweets à la base de donnée sur des thèmes près établies :
 sh recup.sh
@@ -21,13 +22,13 @@ sh recup.sh
 création d’un fichier html qui illustre les emotions :
 python twitter.py + "thème désiré"  
 
-Auteurs
+## Auteurs
 
 Camille Carrette
 Cholok Lee
 Antonin Leonard
 Leo Tepedelen
 
-Lien gitlab
+## Lien gitlab
 
 https://gitlab.info-ufr.univ-montp2.fr/e20170006426/EmotionTwitter
