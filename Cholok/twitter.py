@@ -10,31 +10,7 @@ import numpy as np
 
 
 
-#m= folium.Map(location=[42.3601,-71.0589],zoom_start=12)
 
-#Global Tooltip
-#tooltip='Click For More Info'
-
-#Create custum marker icon
-#logoIcon=folium.features.CustomIcon('logo.png',icon_size=(50,50))
-
-#Create Markers
-#folium.Marker([42.363600,-71.099500],
-#	popup='<strong>Location One</strong>',
-#	tooltip=tooltip).add_to(m),
-#folium.Marker([42.333600,-71.109500],
-#	popup='<strong>Location Two</strong>',
-#	tooltip=tooltip,
-#	icon=folium.Icon(icon='cloud')).add_to(m),
-#Create Circle Markers
-#folium.CircleMarker(
-#	location=[42.466470,-70.942110],
-#	radius=50,
-#	popup='My birthplace',
-#	color='#428bca',
-#	fill=True,
-#	fill_color='428bca'
-#).add_to(m)
 
 region = os.path.join('arrondissement.json')
 
