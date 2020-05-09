@@ -32,3 +32,7 @@ Leo Tepedelen
 ## Lien gitlab
 
 https://gitlab.info-ufr.univ-montp2.fr/e20170006426/EmotionTwitter
+
+## Lien de la vidéo de présentation du site 
+
+https://youtu.be/4wGRrRX_lPw
